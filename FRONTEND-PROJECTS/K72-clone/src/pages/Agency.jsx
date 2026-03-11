@@ -11,7 +11,11 @@ const Agency = () => {
       gsap.to(imageDivRef.current,{
         scrollTrigger:{
           trigger: imageDivRef.current,
-          markers: true
+          markers: true,
+          start:'top 36%',
+          end:'top -100%',
+          scrub: true,
+          pin: true
         }
       })
     }
