@@ -3,6 +3,7 @@ import Video from '../components/home/Video'
 import Homeherotext from '../components/home/Homeherotext'
 import Homebottomtext from '../components/home/Homebottomtext'
 import Content from '../components/home/Content'
+import RealTimeDate from '../components/common/RealTimeDate'
 const Home = () => {
   return (
   <div>
@@ -13,6 +14,7 @@ const Home = () => {
       <Homeherotext></Homeherotext>
       <Content/>
       <Homebottomtext></Homebottomtext>
+      <RealTimeDate/>
     </div>
   </div>
   )

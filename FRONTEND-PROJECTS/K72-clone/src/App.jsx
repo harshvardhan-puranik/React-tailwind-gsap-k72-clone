@@ -10,7 +10,7 @@ import Navfull from './components/Navigation/Navfull'
 const App = () => {
   
   return (
-    <div>
+    <div className='overflow-x-hidden'>
        <Navbar/>
        <Navfull/>
       <Routes>

@@ -4,11 +4,11 @@ import gsap from 'gsap'
 import { useRef } from 'react'
 import { useLocation } from 'react-router-dom'
 
+
 const Stairs = (props) => {
     const stairRef = useRef(null)
     const currentPath = useLocation().pathname
     const pageRef = useRef(null)
-     
     useGSAP(function () {
     const tl = gsap.timeline()
     tl.to(stairRef.current, {
@@ -37,6 +37,7 @@ const Stairs = (props) => {
         delay:1.3,
         scale:1.2
     })
+    
   },[[currentPath]])
 
     return (

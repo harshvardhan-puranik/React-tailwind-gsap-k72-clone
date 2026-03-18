@@ -7,6 +7,7 @@ import gsap from 'gsap'
 import { useRef } from 'react'
 import { NavbarContext } from '../../context/NavContext'
 import { useState } from 'react'
+import RealTimeDate from '../common/RealTimeDate'
 
 const Navfull = () => {
 
@@ -19,25 +20,31 @@ const Navfull = () => {
             display: 'block'
         })
         tl.to('.stairing', {
-            delay: 0.2,
+            delay: 0.1,
             height: '100%',
             stagger: {
-                amount: -0.3
+                amount: -0.4
             }
         })
         tl.to('.link', {
             opacity: 1,
             rotateX: 0,
             stagger: {
-                amount: 0.3
+                amount: 0.2
             }
         })
         tl.to('.navLink', {
             opacity: 1
         })
+        tl.to('.date', {
+            opacity: 1
+        })
     }
     function gsapreverseAnimation() {
         const tl = gsap.timeline()
+        tl.to('.date', {
+            opacity: 0
+        })
         tl.to('.link', {
             opacity: 0,
             rotateX: 90,
@@ -45,20 +52,23 @@ const Navfull = () => {
                 amount: 0.1
             }
         })
-        tl.to('.stairing', {
-            height: 0,
-            stagger: {
-                amount: 0.1
-            }
-        })
-
         tl.to('.navLink', {
             opacity: 0
         })
+        tl.to('.stairing', {
+            height: 0,
+            stagger: {
+                amount: 0.4
+            }
+        })
+
+
+
         tl.to('.fullscreennav', {
             display: 'none',
 
         })
+
     }
     useGSAP(function () {
         if (navOpen) {
@@ -171,8 +181,8 @@ const Navfull = () => {
                     </div>
 
                 </div>
-                <div className='navLink h-2/10 flex w-full items-end p-2 font-[font1] font-extralight uppercase text-[10px]'>
-                    <div className='w-1/3 text-4xl'>Date</div>
+                <div className='date h-2/10 flex w-full items-end p-2 font-[font1] font-extralight uppercase text-[10px]'>
+                    <div className=' w-1/3 text-4xl'><RealTimeDate /></div>
                     <div className='w-1/3 flex justify-center gap-2 text-sm py-2'>
                         <h3 className='hover:text-lime-300'><a href="#">Privacy Policy</a></h3>
                         <h3 className='hover:text-lime-300'><a href="#">Privacy Notice</a></h3>
