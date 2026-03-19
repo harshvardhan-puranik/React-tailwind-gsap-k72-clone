@@ -49,16 +49,16 @@ const Agency = () => {
   return (
     <div>
       <div className='section1 relative py-1'>
-        <div ref={imageDivRef} className='absolute  h-[20vw] w-[15vw]  top-50 left-[30vw] rounded-3xl overflow-hidden'>
+        <div ref={imageDivRef} className='absolute  h-[20vw] w-[15vw]  lg:top-60 sm:top-80 top-90 left-[30vw] lg:rounded-3xl rounded-2xl overflow-hidden'>
           <img ref={imageRef} className='h-full w-full object-cover' src="https://k72.ca/images/teamMembers/Carl_480x640.jpg?w=480&h=640&fit=crop&s=f0a84706bc91a6f505e8ad35f520f0b7" alt="" />
         </div>
         <div className='font-[font2] relative'>
           <div className='mt-[55vh]'>
-            <h1 className='text-[19vw] text-center leading-[17vw] uppercase'>SEVEN7Y <br />
+            <h1 className='lg:text-[19vw] sm:text-[17vw] text-[15vw] text-center lg:leading-[17vw] sm:leading-[15vw] leading-[12vw] uppercase'>SEVEN7Y <br />
               TWO</h1>
           </div>
           <div className='pl-[40%]'>
-            <p className='text-6xl'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
+            <p className='lg:text-6xl text-4xl'>&nbsp;&nbsp;&nbsp;We’re inquisitive and open-minded, and we make sure creativity crowds out ego from every corner. A brand is a living thing, with values, a personality and a story. If we ignore that, we can achieve short-term success, but not influence that goes the distance. We bring that perspective to every brand story we help tell.</p>
           </div>
         </div>
       </div>

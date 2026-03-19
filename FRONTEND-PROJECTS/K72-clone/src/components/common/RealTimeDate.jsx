@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from 'react';
+import React, { useEffect, useState } from "react";
 
 const RealTimeDate = () => {
   const [time, setTime] = useState(new Date());
@@ -11,44 +11,59 @@ const RealTimeDate = () => {
     return () => clearInterval(timer);
   }, []);
 
-  const date = time.toLocaleDateString('en-US', {
-    weekday: 'short',
-    day: '2-digit',
-    month: 'short',
-    year: 'numeric'
+  const date = time.toLocaleDateString("en-US", {
+    weekday: "short",
+    day: "2-digit",
+    month: "short",
+    year: "numeric",
   });
 
-  const clock = time.toLocaleTimeString('en-US');
+  const clock = time.toLocaleTimeString("en-US");
 
   return (
-    <div className="w-fit max-w-[90vw]">
-      <div className="
+    <div className="w-fit max-w-full">
+      <div
+        className="
         bg-black/60 backdrop-blur-xl 
         border border-white/10 
-        rounded-xl shadow-lg
-        
-        px-3 py-2 
-        sm:px-4 sm:py-2.5 
-        md:px-5 md:py-3
-      ">
-        
-        <div className="
-          text-[10px] sm:text-xs md:text-sm 
-          tracking-[0.2em] sm:tracking-[0.25em] 
+        rounded-lg shadow-md
+        px-1 py-0.75
+        xs:px-2 xs:py-1
+        sm:px-3 sm:py-2
+      "
+      >
+        <div
+          className="
+          text-[6px] 
+          xs:text-[7px] 
+          sm:text-[9px] 
+          md:text-xs
+          tracking-widest 
+          xs:tracking-[0.15em] 
+          sm:tracking-[0.2em]
+          
           text-white/50 uppercase
-        ">
+          truncate
+        "
+        >
           {date}
         </div>
 
-        <div className="
-          text-lg sm:text-xl md:text-2xl lg:text-3xl 
+        <div
+          className="
+          text-[10px] 
+          xs:text-xs 
+          sm:text-sm 
+          md:text-lg 
+          lg:text-2xl
           font-semibold text-white 
-          mt-0.5 sm:mt-1 
-          tracking-wide
-        ">
+          mt-0.5 
+          tracking-tight
+          truncate
+        "
+        >
           {clock}
         </div>
-
       </div>
     </div>
   );

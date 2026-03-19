@@ -51,9 +51,9 @@ const projects = () => {
       <div className='pt-[45vh]'>
         <h2 className='font-[font2] text-[9.5vw] text-black uppercase'>Projects</h2>
       </div>
-      <div className='-mt-10 parent'>
+      <div className='lg:-mt-10 sm:-mt-5 mt-0 parent'>
         {projects.map(function(elem,idx){
-          return <div key={idx} className='hero w-full h-160 mb-4 flex gap-4'>
+          return <div key={idx} className='hero w-full lg:h-160 h-120 mb-4 flex gap-4'>
             <ProjectCard image1={elem.image1} image2={elem.image2}  />
           </div>
         })}
